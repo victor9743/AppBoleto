@@ -9,10 +9,14 @@ import Registrar from './src/views/Registrar'
 import Home from './src/views/Home'
 import CadastroCliente from './src/views/CadastroCliente'
 import Clientes from './src/views/Clientes'
-
+import banco from './src/models/banco'
+import usuario from './src/models/usuario'
 const Stack = createNativeStackNavigator()
-
+// banco().apagarTables()
+// banco().criarBanco()
+usuario().todosUsuarios()
 function App() {
+  
 
   return (
     <NavigationContainer>

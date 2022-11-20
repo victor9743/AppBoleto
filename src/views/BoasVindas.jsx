@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native"
 import styles from '../styles'
 import Money from '../assets/images/money.jpg'
