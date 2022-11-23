@@ -18,6 +18,7 @@ function banco (){
                 cidade text,
                 cep text,
                 endereco text,
+                siglaEstado text,
                 bairro text
             );`,
             `CREATE TABLE IF NOT EXISTS boletos(
@@ -38,8 +39,10 @@ function banco (){
             }
           }, (error) => {
             console.log(error)
+            console.log('1')
           }, () => {
             console.log("erro ")
+            console.log('2')
           }
         )
     }

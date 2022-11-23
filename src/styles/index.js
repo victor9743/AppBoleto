@@ -59,6 +59,17 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#fff'
     },
+    inputValor:{
+        width: width - 35,
+        height: 56,
+        backgroundColor: 'white',
+        borderRadius: 6,
+        marginVertical: 8,
+        marginHorizontal: 37,
+        paddingHorizontal: 16,
+        fontSize: 16,
+        color: 'black'
+    },
     labelLogin: {
         marginLeft: 35
     },

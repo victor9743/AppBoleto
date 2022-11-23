@@ -8,7 +8,7 @@ function CadastroCliente(){
     const [cepvalue, setCEP] = useState('')
     const [endereco, Endereco] = useState({})
     const [form, setForm] = useState({ nomeCliente: '', cpf: '', cep: '', bairro: '' })
-    const {salvarCliente, clientes} = Rotas()
+    const {salvarCliente} = Rotas()
     
     function verificarCep(){
         axios
@@ -48,7 +48,7 @@ function CadastroCliente(){
                 setForm({ ...form, bairro: text, })
             }}/>
             
-            <Pressable style={[styles.botaoParaLogin, {marginTop: 15, marginLeft: 205, marginRight: 30, paddingLeft: 55}]} onPress={function() {salvarCliente([form,  endereco.address])}}>
+            <Pressable style={[styles.botaoParaLogin, {marginTop: 15, marginLeft: 205, marginRight: 30, paddingLeft: 55}]} onPress={function() {salvarCliente([form,  endereco.address, endereco.state, endereco.city])}}>
                 <Text>Cadastrar</Text>
             </Pressable>
         </View>

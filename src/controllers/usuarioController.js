@@ -3,9 +3,6 @@ import { useNavigation } from '@react-navigation/native'
 function usuarioController() {
     const {inserirUsuario, loginUsuario} = usuario()
     const navigation = useNavigation()
-    function getAll(){
-
-    }
 
     function saveUser(user){
         if (user['login'] != '' && user['senha'] != '' && user['confirmSenha'] != '') {
@@ -37,7 +34,6 @@ function usuarioController() {
     }
 
     return {
-        getAll,
         saveUser,
         login
     }

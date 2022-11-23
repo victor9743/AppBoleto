@@ -6,14 +6,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Rotas from '../routes/Rotas';
 
 function Home(){
-    const {sair, clientes} = Rotas()
+    const {sair, clientes, boletos} = Rotas()
     return (
         <View style={[styles.planoDeFundo, {alignItems: "center", justifyContent: "center"}]}>
             <TouchableOpacity style={[styles.botaoParaLogin]} onPress={clientes}>
                 <Text>Clientes</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.botaoParaLogin, {marginTop: 50}]}>
+            <TouchableOpacity style={[styles.botaoParaLogin, {marginTop: 50}]} onPress={boletos}>
                 <Text>Boletos</Text>
             </TouchableOpacity>
 
