@@ -1,4 +1,4 @@
-import {View, FlatList, StyleSheet, Text, StatusBar, Pressable } from 'react-native';
+import {View, FlatList, StyleSheet, Text, StatusBar, Pressable, ScrollView } from 'react-native';
 import styles from '../styles';
 import Rotas from '../routes/Rotas';
 import cliente from '../models/cliente';
@@ -19,15 +19,12 @@ const Clientes = () => {
   useEffect(() => {
     cliente().todosClientes().then(function({ _array }){
       Cliente(_array)
-      
-      // console.log(clientes)
     })
   }, [route.params])
 
 
 
   const renderItem = ({ item }) => (
-    // console.log(item)
     <Item title={`${item.nomeCliente} ${item.cpf} ${item.cidade}`}/>
   );
  
@@ -35,14 +32,16 @@ const Clientes = () => {
 
   return (
         <View style={styless.container}>
-        <FlatList
-            data={clientes}
-            keyExtractor={item => item.id}
-            renderItem={renderItem}
-        />
-         <Pressable style={[styles.botaoParaLogin, {margin: 100}]} onPress={cadastrarCliente}>
-            <Text style={{textAlign: 'center'}}>+ Cliente</Text>
-        </Pressable>
+
+          <FlatList
+              data={clientes}
+              keyExtractor={item => item.id}
+              renderItem={renderItem}
+          />
+          <Pressable style={[styles.botaoParaLogin, {margin: 100}]} onPress={cadastrarCliente}>
+              <Text style={{textAlign: 'center'}}>+ Cliente</Text>
+          </Pressable>
+ 
         </View>
     
   );

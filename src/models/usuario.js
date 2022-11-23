@@ -18,7 +18,6 @@ function usuario() {
     }
 
     function inserirUsuario(usuario) {
-      console.log(usuario);
         db.exec(
           [
             { sql: 'insert into usuarios (usuario, senha) values (?,?);', args: usuario },

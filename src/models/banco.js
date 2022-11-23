@@ -39,10 +39,8 @@ function banco (){
             }
           }, (error) => {
             console.log(error)
-            console.log('1')
           }, () => {
             console.log("erro ")
-            console.log('2')
           }
         )
     }

@@ -18,7 +18,6 @@ import CadastrarBoleto from './src/views/CadastrarBoleto'
 const Stack = createNativeStackNavigator()
 // banco().apagarTables()
  banco().criarBanco()
-// usuario().todosUsuarios()
 
 function App() {
   
@@ -38,7 +37,7 @@ function App() {
         <Stack.Screen name='Boletos' component={Boletos}/>
         <Stack.Screen name='CadastrarBoleto' component={CadastrarBoleto} />
       </Stack.Navigator>
-    </NavigationContainer >
+    </NavigationContainer>
   )
 }
 

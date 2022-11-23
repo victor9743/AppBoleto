@@ -6,7 +6,8 @@ function clienteController(){
 
     function salvarClientes(clienteArray){
         save(clienteArray)
-        navigation.navigate('Clientes')
+        navigation.navigate('home')
+        alert('Cliente cadastrado com sucesso')
     }
 
     return {

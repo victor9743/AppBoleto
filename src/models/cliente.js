@@ -25,10 +25,25 @@ function cliente () {
             })
         })
     }
+
+
+    function clientesByName(cliente) {
+      return new Promise(function (resolve, reject) {
+          db.transaction(tx => {
+            tx.executeSql(`select * from clientes where nomeCliente = ?;`, [cliente], (_, { rows }) => {
+              resolve(rows)
+            }), (sqlError) => {
+              reject(sqlError)
+            }
+          }, (txError) => {
+            reject(txError)
+          })
+      })
+  }
     return {
         save,
-        todosClientes
-
+        todosClientes,
+        clientesByName
     }
 }
 export default cliente
