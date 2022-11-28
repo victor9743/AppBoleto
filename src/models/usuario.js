@@ -29,7 +29,6 @@ function usuario() {
     }
 
     function loginUsuario(usuario, senha){
-      console.log(usuario, senha)
         return new Promise(function (resolve, reject) {
             db.transaction(tx => {
               tx.executeSql(`select * from usuarios where usuario = ? and senha = ?;`, [usuario, senha], (_, { rows }) => {

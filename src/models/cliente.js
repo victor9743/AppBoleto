@@ -14,15 +14,15 @@ function cliente () {
 
     function todosClientes() {
         return new Promise(function (resolve, reject) {
-            db.transaction(tx => {
-              tx.executeSql(`select * from clientes;`, [], (_, { rows }) => {
-                resolve(rows)
-              }), (sqlError) => {
-                reject(sqlError)
-              }
-            }, (txError) => {
-              reject(txError)
-            })
+          db.transaction(tx => {
+            tx.executeSql(`select * from clientes;`, [], (_, { rows }) => {
+              resolve(rows)
+            }), (sqlError) => {
+              reject(sqlError)
+            }
+          }, (txError) => {
+            reject(txError)
+          })
         })
     }
 
@@ -39,7 +39,7 @@ function cliente () {
             reject(txError)
           })
       })
-  }
+    }
     return {
         save,
         todosClientes,

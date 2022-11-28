@@ -3,7 +3,6 @@ import styles from '../styles';
 import Rotas from '../routes/Rotas';
 import cliente from '../models/cliente';
 import { useState, useEffect } from 'react'
-
 import {useRoute} from '@react-navigation/native'
 
 const Item = ({ title }) => (

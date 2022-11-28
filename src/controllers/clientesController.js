@@ -1,7 +1,7 @@
 import cliente from "../models/cliente"
 import { useNavigation } from '@react-navigation/native'
 function clienteController(){
-    const {save, todosClientes} = cliente()
+    const {save} = cliente()
     const navigation = useNavigation()
 
     function salvarClientes(clienteArray){
