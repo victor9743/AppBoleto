@@ -33,7 +33,6 @@ function boletosController() {
                 headers: {
                 accept: 'application/json',
                 'content-type': 'application/json',
-                authorization: 'Bearer -J04vfs8S0jIItnM-RIVJzo1xuhd6guxwOs3FuQZWUM'
                 },
                 body: JSON.stringify({
                 interest_type: 0,
